@@ -5,959 +5,285 @@
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="preload" href="https://scripts.converteai.net/47892230-16bf-42fa-877c-9736cc726e4e/players/63d9d743dac01800092a571d/player.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+    <link rel="preload" href="https://images.converteai.net/47892230-16bf-42fa-877c-9736cc726e4e/players/63d9d743dac01800092a571d/thumbnail.jpg" as="image">
+    <link rel="preload" href="https://cdn.converteai.net/47892230-16bf-42fa-877c-9736cc726e4e/63d9d726dac01800092a571c/playlist.m3u8" as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Título da Página -->
-    <title>Nuevo método</title>
+    <title>Programa Mente Tranquila</title>
     <style>
-        .delay{display:none;}
+      .delay{display:none;}
 
-        body {
+      body {
       font-size: 16px;
       background-color: #fff;
       min-height: 100%;
-    }
+      }
 
-  @media (max-width: 768px) {
-    .video-player {
-      width: 100%;
-      background: 0 0;
-    }
-    .video-player iframe {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      margin: auto;
-    }
-    #frame {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      margin: auto;
-    }
-  }
+      .container{
+        max-width: 800px!important;
+      }
 
-@media (max-width: 768px) {
-  .video-player {
-    margin-top: 0 !important;
-  }
-}
+      .a-btn {
+        text-decoration: none;
+        -webkit-font-smoothing: antialiased;
+        margin: 0;
+        border: 0; 
+        font: inherit; 
+        vertical-align: baseline;
+        color: #2e82bc; 
+        outline: 0; 
+        line-height: 1; 
+        text-align: center; 
+        position:relative!important; display: inline-block!important;
+        border-style: solid; 
+        width: 100%; padding-left: 0!important; padding-right: 0!important; 
+        margin-bottom: 10px; 
+        padding: 22px 44px; border-color: #ff5535; border-width: 0px; 
+        border-radius: 6px; 
+        background: linear-gradient(to bottom, #ff0000 0%, #560000 100%);
+        box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
+        text-decoration: none!important;
+        cursor: pointer;
 
-.container{
-  max-width: 800px!important;
-}
+         animation: pulse 1.5s infinite alternate;
+        animation-name: pulse;
+        -webkit-animation-name: pulse;
+        animation-duration: 1.5s;
+        -webkit-animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        text-decoration: none;
+      }
 
-.a-btn {
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
-  border: 0; 
-  font: inherit; 
-  vertical-align: baseline;
-  color: #2e82bc; 
-  outline: 0; 
-  line-height: 1; 
-  text-align: center; 
-  position:relative!important; display: inline-block!important;
-  border-style: solid; 
-  width: 100%; padding-left: 0!important; padding-right: 0!important; 
-  margin-bottom: 10px; 
-  padding: 22px 44px; border-color: #ff5535; border-width: 0px; 
-  border-radius: 6px; 
-  background: linear-gradient(to bottom, #ff0000 0%, #560000 100%);
-  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
-  text-decoration: none!important;
-  cursor: pointer;
+      @keyframes pulse{
+        0%,100%{transform:scale(.9);opacity:.9;}
+        50%{transform:scale(1);opacity:1;}
+        }
+        @-webkit-keyframes pulse{
+        0%,100%{-webkit-transform:scale(.95);opacity:.7}
+        50%{-webkit-transform:scale(1);opacity:1}
+      }
 
-   animation: pulse 1.5s infinite alternate;
-  animation-name: pulse;
-  -webkit-animation-name: pulse;
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  text-decoration: none;
-}
+      .a-btn:hover {
+          background: #ff0000;
+          color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 0 5px #f90000b0, 0 0 25px #f90000b0, 0 0 50px #f90000b0, 0 0 100px #f90000b0;
+      }
 
-@keyframes pulse{
-  0%,100%{transform:scale(.9);opacity:.9;}
-  50%{transform:scale(1);opacity:1;}
-  }
-  @-webkit-keyframes pulse{
-  0%,100%{-webkit-transform:scale(.95);opacity:.7}
-  50%{-webkit-transform:scale(1);opacity:1}
-}
+      .span-btn {
+        text-decoration: none;
+        -webkit-font-smoothing: antialiased; 
+        text-align: center;
+        margin: 0; 
+        border: 0; 
+        font: inherit;
+        vertical-align: baseline;
+        display: block; 
+        position: relative; 
+        z-index: 1; 
+        padding: 0 15px; 
+        white-space: normal; 
+        font-size: 20px;
+        color: #ffffff; 
+        font-family: Oswald; 
+        font-weight: bold; 
+        text-shadow: #000000 0px 1px 0px;
+        text-decoration: none;
+      }
+      .span-btn2 {
+        -webkit-font-smoothing: antialiased; 
+        text-align: center;
+        padding: 0; border: 0;
+        font: inherit; 
+        vertical-align: baseline; 
+        display: block; 
+        position: relative;
+        z-index: 1; 
+        margin: .2em 0 -.5em; 
+        font-size: 15px; 
+        color: #f5e051; 
+        font-family: Cabin; 
+        font-weight: bold; 
+        font-style: italic;
+        text-shadow: #000000 0px 1px 0px;
+      }
 
-.a-btn:hover {
-    background: #ff0000;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #f90000b0, 0 0 25px #f90000b0, 0 0 50px #f90000b0, 0 0 100px #f90000b0;
-}
+      .som{
+        width: 100%;
+      }
 
-.span-btn {
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased; 
-  text-align: center;
-  margin: 0; 
-  border: 0; 
-  font: inherit;
-  vertical-align: baseline;
-  display: block; 
-  position: relative; 
-  z-index: 1; 
-  padding: 0 15px; 
-  white-space: normal; 
-  font-size: 20px;
-  color: #ffffff; 
-  font-family: Oswald; 
-  font-weight: bold; 
-  text-shadow: #000000 0px 1px 0px;
-  text-decoration: none;
-}
-.span-btn2 {
-  -webkit-font-smoothing: antialiased; 
-  text-align: center;
-  padding: 0; border: 0;
-  font: inherit; 
-  vertical-align: baseline; 
-  display: block; 
-  position: relative;
-  z-index: 1; 
-  margin: .2em 0 -.5em; 
-  font-size: 15px; 
-  color: #f5e051; 
-  font-family: Cabin; 
-  font-weight: bold; 
-  font-style: italic;
-  text-shadow: #000000 0px 1px 0px;
-}
+      .last-pg{
+        width: 100%;
+        height: 100%;
+        padding-bottom: 5px;
+        padding-top: 10px;
+      }
 
-/* Formulário */
-.login-box {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  width: 540px;
-  padding: 40px;
-  transform: translate(-50%, 0%);
-  /*background: rgba(0,0,0,.5);*/
-  background-color: #000;
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
-  border-radius: 10px;
-  z-index: 10000000000;
-}
+      .modal{
+        background-color: white;
+        border-radius: 20px;
+        margin: 50px auto;
+        overflow:auto; 
+        max-width: 500px;
+        z-index: 10000000;
+        padding: 10px;
+        color: #646464;
+      }
 
-.login-box h2 {
-  margin: 0 0 10px;
-  padding: 0;
-  color: #fff;
-  text-align: center;
-}
+      .close-modal{
+          cursor: pointer;
+          border: none;
+          width: 40px;
+          height: 40px;
+          border-radius: 50px;
+      }
 
-.login-box h3{
-    color: white;
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-}
+      .modal::-webkit-scrollbar {
+          width: 6px;
+      }
 
-.login-box .user-box {
-  position: relative;
-}
+      .modal-footer button{
+        margin: 0 auto;
+        border: none;
+        padding: 10px 40px;
+      }
 
-.login-box .user-box input {
-  width: 100%;
-  padding: 10px 0px 10px 5px;
-  font-size: 16px;
-  color: #323232;
-  margin-bottom: 25px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  border-radius: 3px;
-  outline: none;
-}
-.login-box .user-box label {
-  position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 5px;
-  font-size: 16px;
-  color: #a6a6a6;
-  pointer-events: none;
-  transition: .5s;
-}
+      .dim {
+        /* For Internet Explorer */
+        box-shadow: 0 0 0 1000px rgba(0, 0, 0, .6);
+          
+        /* For other browsers */
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .6);
+      }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -25px;
-  left: 0;
-  color: #fff;
-  font-size: 12px;
-}
+      .footer p{
+        font-weight: 100;
+        font-size: 12px;
+        margin: 20px auto;
+        padding: 2px 28px;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #787878;
+        max-width: 800px;
+        padding-top: 20px;
+      }
 
-.login-box form button{
-  position: relative;
-  display: block;
-  padding: 10px 20px;
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  letter-spacing: 4px;
-  background-color: #0DC51D;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  width: 100%;
-}
+      .texto-branco{
+        color: #fff;
+      }
 
-.login-box .btn-ok:hover{
-  background: #05FF05;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #05FF05,
-              0 0 25px #05FF05,
-              0 0 50px #05FF05,
-              0 0 100px #05FF05;
-}
+      /* PESSOAS ASSISTINDO */
+      .assistindo{
+        color: white;
+        font-size: 13px;
+        font-weight: 600;
+        padding-top: 5px;
+      }
 
-.login-box img{
-  width: 70px;
-  margin: 20px auto 0px auto;
-  display: block;
-}
+      .assistindo span{
+        font-weight: 800;
+      }
+      /* END PESSOAS ASSISTINDO */
 
-@media screen and (max-width: 800px){
+      .img-uni{
+        max-width: 19%;
+        margin: auto;
+      }
 
-  .login-box{
-    width: 90%;
-    font-size: 15px;
-    /*top: 740px;*/
-  }
+      ol li{
+          padding-top: 15px;
+          padding-right: 10px;
+      }
+  </style>
 
-  .login-box .user-box input{
-    font-size: 18px;
-  }
 
-  .login-box .user-box label{
-    font-size: 15px;
-  }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DYHLCY654N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  .login-box form a{
-    /*font-size: 40px;*/
-  }
-}
-
-h3 {
-  font-size: 25px;
-}
-
-h4 {
-  color: #ADADAD;
-  font-size: 16px;
-}
-
-.disc p{
-  font-weight: 100;
-  font-size: 12px;
-  margin: 20px auto;
-  padding: 2px 28px;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #787878;
-  max-width: 800px;
-  padding-top: 20px;
-  line-height: 13px;
-}
-
-.disc{
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.texto-branco{
-  color: #fff;
-}
-
-.texto-branco-div {
-  text-align: center;
-  color: #fff;
-}
-
-.som{
-  width: 100%;
-}
-
-.last-pg{
-  background-color: black;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 5px;
-  padding-top: 10px;
-}
-
-.modal{
-  background-color: white;
-  border-radius: 20px;
-  margin: 50px auto;
-  overflow:auto; 
-  max-width: 500px;
-  z-index: 10000000;
-  padding: 10px;
-  color: #646464;
-}
-
-.close-modal{
-    cursor: pointer;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-}
-
-.modal::-webkit-scrollbar {
-    width: 6px;
-}
-
-.modal-footer button{
-  margin: 0 auto;
-  border: none;
-  padding: 10px 40px;
-}
-
-.dim {
-  /* For Internet Explorer */
-  box-shadow: 0 0 0 1000px rgba(0, 0, 0, .6);
-    
-  /* For other browsers */
-  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .6);
-}
-
-/* Cometários FB*/
-a.button-IWiNKI0399434-element {
-  background-color: #ffafcc;
-  border-radius: 4px;
-  border: none;
-  color: #ffffff;
-  padding: 16px 32px 16px 32px;
-  font-weight: 600;
-  display: block;
-  width: fit-content;
-  text-align: center;
-  margin: 4vh auto 6vh auto;
-  font-size: 1.49vw;
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-@media (max-width: 1200px) {
-  a.button-IWiNKI0399434-element {
-    font-size: 3.38vw;
-    margin: 2.64vh auto 4.5vh auto
-  }
-}
-
-@media (max-width: 600px) {
-  a.button-IWiNKI0399434-element {
-    font-size: 4.50vw;
-  }
-}
-
-.px-1{padding-left:4px;padding-right:4px}
-.pt-0.5{padding-top:2px}
-.mt-4{margin-top:16px}
-@media (min-width:640px){.sm\:text-sm{font-size:14px;line-height:20px}}
-.mt-2{margin-top:8px}
-.mb-2{margin-bottom:8px}
-.flex{display:flex}
-.w-full{width:100%}
-.space-x-1>:not([hidden])~:not([hidden]){margin-left:.25rem}
-.items-center{align-items:center}
-.font-\[Helvetica\]{font-family:Helvetica,Arial,sans-serif}
-.cursor-pointer{cursor:pointer}
-.rounded-full{border-radius:99999px}
-.h-12{height:48px}.w-12{width:48px}
-.flex-col{flex-direction:column}
-.py-1{padding-top:4px;padding-bottom:4px}
-.px-3{padding-left:12px;padding-right:12px}
-.pl-0\.5,.px-0\.5{padding-left:2px}
-.rounded-\[18px\]{border-radius:18px}
-.bg-stone-100{background-color:#f5f5f4}
-.px-0\.5{padding-right:2px}
-.font-semibold{font-weight:600}
-.text-\[\#365899\]{color:#365899}
-.text-\[13px\]{font-size:13px}
-.leading-4{line-height:16px}
-.hover\:underline:hover{text-decoration-line:underline}
-.text-sm{font-size:14px}
-.relative{position:relative}
-.justify-between{justify-content:space-between}
-.grow{flex-grow:1}
-.text-xs{font-size:12px}
-.text-\[\#90949c\]{color:#90949c}
-.ml-px{margin-left:1px}
-.gap-1{gap:4px}
-.w-fit{width:fit-content}
-.hidden{display:none}
-.-mt-1{margin-top:-4px}
-.-mt-2{margin-top:-8px}
-.mr-2{margin-right:8px}
-.h-4,.h-5{height:16px}
-.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));filter:var(--tw-drop-shadow)}
-.bg-slate-50{background-color:#f8fafc}
-.py-0\.5{padding-top:2px;padding-bottom:2px}
-.pr-1{padding-right:4px}
-.block{display:block}
-.w-4{width:16px}
-.z-10{z-index:10}
-.-ml-1{margin-left:-4px}
-.ml-4{margin-left:16px}
-.gap-x-0\.5{column-gap:2px}
-.mr-0\.5{margin-right:2px;margin-left:2px}
-.border-l{border-left-width:1px}
-.border-slate-300{border-color:#cbd5e1}
-.border-dotted{border-style:dotted}
-.ml-5{margin-left:20px}.h-8{height:32px}
-.w-8{width:32px}.h-10{height:40px}
-.w-10{width:40px}
-@media (min-width:640px){.sm\:w-16{width:64px}.sm\:ml-12{margin-left:48px}}
-.pl-2{padding-left:8px}
-
-.fbComments-nePoMc4912814-element {
-max-width: 800px;
-margin: 15px auto 20px auto;
-padding: 16px;
-border-radius:20px;
-background-color:#fff;
-}
-.fbComments-nePoMc4912814-element p {
-font-family: 'Helvetica', 'Arial', sans-serif;
-}
-
-a.button-nmYvzv4924929-element {
-background-color: #ffafcc;
-border-radius: 4px;
-border: none;
-color: #ffffff;
-padding: 16px 32px 16px 32px;
-font-weight: 600;
-display: block;
-width: fit-content;
-text-align: center;
-margin: 6vh auto 1vh auto;
-font-size: 1.49vw;
-box-sizing: border-box;
-max-width: 100%;
-}
-@media (max-width: 1200px) {
-a.button-nmYvzv4924929-element {
-font-size: 3.38vw;
-margin: 3.96vh auto 0.75vh auto
-}
-}
-@media (max-width: 600px) {
-  a.button-nmYvzv4924929-element {
-    
-  }
-}
-
-.resp{
-  margin-left: 45px;
-  margin-top: -15px;
-  border-left: 1px dotted #dadada;
-  padding-left: 10px;
-  padding-top: 1px;
-}
-
-h3 {
-  font-size: 25px;
-}
-
-h4 {
-  color: #ADADAD;
-  font-size: 16px;
-}
-
-.footer p{
-  font-weight: 100;
-  font-size: 12px;
-  margin: 20px auto;
-  padding: 2px 28px;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #787878;
-  max-width: 800px;
-  padding-top: 20px;
-}
-
-.texto-branco{
-  color: #fff;
-}
-
-.texto-branco-div {
-  text-align: center;
-  color: #fff;
-}
-
-.som{
-  width: 100%;
-}
-
-.line-fb{
-  border: 1px solid #dadada;
-  width: 100%;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.plugin-facebook-text {
-    font-size: 12px;
-    line-height: 16px;
-    color: #2078F4;
-  }
-
-.last-pg{
-  background-color: black;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 5px;
-  padding-top: 10px;
-}
-
-/*END COMENTÀRIOS*/
-
-/* PESSOAS ASSISTINDO */
-.assistindo{
-  color: white;
-  font-size: 13px;
-  font-weight: 600;
-  padding-top: 5px;
-}
-
-.assistindo span{
-  font-weight: 800;
-}
-/* END PESSOAS ASSISTINDO */
-
-</style>
+    gtag('config', 'G-DYHLCY654N');
+  </script>
 
   </head>
   <body>
-    <div style="width: 100%;text-align: center;height: 50px;background-color: red;color: white;padding-top: 10px;font-weight: bold;font-family: sans-serif;"><p class="assistindo"><span id="number"></span> personas viendo ahora mismo...</p></div>
-    <header>
+    <div style="width: 100%;text-align: center;height: 50px;background-color: #000;color: white;padding-top: 10px;font-weight: bold;font-family: sans-serif;"><p class="assistindo"><span id="number"></span> personas viendo ahora mismo...</p></div>
+    <header style="background-image: radial-gradient(#006d70, #005B5E);padding-bottom:40px;">
       <div class="container">        
         <!-- HL em IMG -->
-        <img style="width: 100%; padding-bottom: 10px" src="hl-01.png">
+        <img style="width: 100%; padding-bottom: 10px" src="img/hl-01.png">
     
         <!-- VSL -->
         <div id="vid_63d9d743dac01800092a571d" style=" border-radius: 10px; position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_63d9d743dac01800092a571d" src="https://images.converteai.net/47892230-16bf-42fa-877c-9736cc726e4e/players/63d9d743dac01800092a571d/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_63d9d743dac01800092a571d" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_63d9d743dac01800092a571d">var s=document.createElement("script");s.src="https://scripts.converteai.net/47892230-16bf-42fa-877c-9736cc726e4e/players/63d9d743dac01800092a571d/player.js",s.async=!0,document.head.appendChild(s);</script>
 
-        <img style="width: 100%" src="som.png">
+        <img style="width: 100%" src="img/som.png">
 
         <!-- Botão -->
         <div id="cta1" class="delay mt-4">
-          <a href="#" class="a-btn" style="text-decoration: none;">
+          <a href="https://go.hotmart.com/I78620407D?ap=4042" class="a-btn" style="text-decoration: none;">
             <span class="span-btn">¡QUIERO ACCEDER YA!</span>
             <span class="span-btn2">(Atención: Plazas limitadas.)</span>
           </a>
-          <a href="#">
-              <img style="width: 40%;margin: auto;display: block;" src="carrinho.avif">
+          <a href="https://go.hotmart.com/I78620407D?ap=4042">
+              <img style="width: 40%;margin: auto;display: block;" src="img/carrinho.avif">
           </a>
                          
         </div>
       </div>        
     </header>
 
-    <!-- COMENTTÀRIOS -->
-    <div style="background-color: #000; padding-top: 20px; padding-bottom: 20px; margin-top: 20px;">
-            <div style="text-align: left;" class="fbComments-nePoMc4912814">
-                <div id="testimonials" class="fbComments-nePoMc4912814-element">
-                    <p class="text-xs sm:text-sm leading-4 font-semibold mb-2">
-                        Mostrando 6 de 2.352 comentários
-                    </p>
-                    <span class="line-fb"></span>
+    <!-- REFERENCIAS -->
+    <div style="background-color: #fff; padding-top: 20px; padding-bottom: 20px; margin: 20px auto; max-width: 1000px; text-align: center;">
 
-                    <div class="mb-2">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/1.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Matheus Kauan</p>
-                                <p class="text-sm leading-4 pt-0.5">Mi lucha con el tinnitus duró más de 27 años, principalmente en mi oído derecho, llegó al punto en que ya no tenía placer de vivir. Especialmente a la hora de dormir, parecía que mi cerebro no se apagaba. Tuve varios tratamientos con más de 7 médicos, mi esposo incluso vendió un auto para pagar un tratamiento. Después de todos estos años de lucha estoy 100% curada gracias a este programa. Recomiendo mucho este video a todos mis amigos, porque me devolvió la paz que tanto buscaba. Dios bendiga a este joven y toda su familia</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">12</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">16</span>
-                            </div>
-                        </div>
-                    </div>
+      <p style="font-size: 25px;font-weight: 500;color: gray;">Referências Científicas:</p>
+      <div style="margin: auto;">
+        <img class="img-uni" src="img/1.png">
+        <img class="img-uni" src="img/2.png">
+        <img class="img-uni" src="img/3.png">
+        <img class="img-uni" src="img/4.png">
+        <img class="img-uni" src="img/5.png">
+      </div>
 
-                    <div class="mb-2 resp">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/2.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Sarah Oliveto</p>
-                                <p class="text-sm leading-4 pt-0.5"><span style="color: #0052ff;">Matheus Kauan </span>Ese fue el único video que realmente me ayudó a curar el tinnitus en mi oído también, gracias</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">5</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">4</span>
-                            </div>
-                        </div>
-                    </div>
+      <div>
+      <ol style="text-align: left;font-size: 14px;color: gray;">
+        <li>Thomas SS, Kim M, Lee SJ, Cha YS. Antiobesity Effects of Purple Perilla (Perilla frutescens var. acuta) on Adipocyte Differentiation. J Food Sci. 2018;83(9):2384-2393. doi:10.1111/1750-3841.14288</li>
+        <li>Zhang X, Zhang QX, Wang X, et al. Dietary luteolin activates browning and thermogenesis in mice through an AMPK/PGC1α pathway-mediated mechanism. Int J Obes (Lond). 2016;40(12):1841-1849. doi:10.1038/ijo.2016.108</li>
+        <li>Pasupuleti VR, Sammugam L, Ramesh N, Gan SH. Honey, Propolis, and Royal Jelly: A Comprehensive Review of Their Biological Actions and Health Benefits. Oxid Med Cell Longev. 2017;2017:1259510. doi:10.1155/2017/1259510</li>
+        <li>Zhou SS, Auyeung KK, Yip KM, et al. Stronger anti-obesity effect of white ginseng over red ginseng and the potential mechanisms involving chemically structural/compositional specificity to gut microbiota. Phytomedicine. 2020;74:152761. doi:10.1016/j.phymed.2018.11.021</li>
+        <li>Mu Q, Fang X, Li X, et al. Ginsenoside Rb1 promotes browning through regulation of PPARγ in 3T3-L1 adipocytes. Biochem Biophys Res Commun. 2015;466(3):530-535. doi:10.1016/j.bbrc.2015.09.064</li>
+        <li>Kamiya T, Nagamine R, Sameshima-Kamiya M, Tsubata M, Ikeguchi M, Takagaki K. The isoflavone-rich fraction of the crude extract of the Puerariae flower increases oxygen consumption and BAT UCP1 expression in high-fat diet-fed mice. Glob J Health Sci. 2012;4(5):147-155. Published 2012 Aug 12. doi:10.5539/gjhs.v4n5p147</li>
+        <li>Kamiya T, Takano A, Matsuzuka Y, et al. Consumption of Pueraria flower extract reduces body mass index via a decrease in the visceral fat area in obese humans. Biosci Biotechnol Biochem. 2012;76(8):1511-1517. doi:10.1271/bbb.120235</li>
+        <li>Xu JH, Liu XZ, Pan W, Zou DJ. Berberine protects against diet-induced obesity through regulating metabolic endotoxemia and gut hormone levels. Mol Med Rep. 2017;15(5):2765-2787. doi:10.3892/mmr.2017.6321</li>
+        <li>Wu L, Xia M, Duan Y, et al. Berberine promotes the recruitment and activation of brown adipose tissue in mice and humans. Cell Death Dis. 2019;10(6):468. Published 2019 Jun 13. doi:10.1038/s41419-019-1706-y</li>
+        <li>Kunkel SD, Elmore CJ, Bongers KS, et al. Ursolic acid increases skeletal muscle and brown fat and decreases diet-induced obesity, glucose intolerance and fatty liver disease. PLoS One. 2012;7(6):e39332. doi:10.1371/journal.pone.0039332</li>
+        <li>Jung YC, Kim HW, Min BK, et al. Inhibitory Effect of Olive Leaf Extract on Obesity in High-fat Diet-induced Mice. In Vivo. 2019;33(3):707-715. doi:10.21873/invivo.11529</li>
+        <li>Oi-Kano Y, Kawada T, Watanabe T, et al. Oleuropein, a phenolic compound in extra virgin olive oil, increases uncoupling protein 1 content in brown adipose tissue and enhances noradrenaline and adrenaline secretions in rats. J Nutr Sci Vitaminol (Tokyo). 2008;54(5):363-370. doi:10.3177/jnsv.54.363</li>
+        <li>Sohn EJ, Kim JM, Kang SH, et al. Restoring Effects of Natural Anti-Oxidant Quercetin on Cellular Senescent Human Dermal Fibroblasts. Am J Chin Med. 2018;46(4):853-873. doi:10.1142/S0192415X18500453</li>
+        <li>Arias N, Picó C, Teresa Macarulla M, et al. A combination of resveratrol and quercetin induces browning in white adipose tissue of rats fed an obesogenic diet. Obesity (Silver Spring). 2017;25(1):111-121. doi:10.1002/oby.21706</li>
+      </ol>
 
-                    <div class="mb-2">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/3.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Ana Girardi</p>
-                                <p class="text-sm leading-4 pt-0.5">Alguien que ya lo haya probado me puede decir si funciona???</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">10</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">14</span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="mb-2 resp">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/4.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Paulo G Silverio</p>
-                                <p class="text-sm leading-4 pt-0.5"><span style="color: #0052ff;">Ana Girardi </span>Hola Ana. Yo también sospechaba pero realmente funciona, estoy en el tercer día y mi tinnitus ha reducido casi todo, no tengas miedo</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">10</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">21</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-2 resp">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/3.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Ana Girardi</p>
-                                <p class="text-sm leading-4 pt-0.5"><span style="color: #0052ff">Paulo G Silverio </span>Gracias voy a probar entonces</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">2</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">2</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-2">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/5.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Cláudio Miranda</p>
-                                <p class="text-sm leading-4 pt-0.5">Maravilloso, lo estoy aplicando ahora y está funcionando, llevo 12 días sin tinnitus. parece un milagro</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">9</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">19</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-2">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/6.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Juliana Manzano</p>
-                                <p class="text-sm leading-4 pt-0.5">Chicos, porque a lo mejor no dicen eso en la farmacia. Creo que es solo para hacernos gastar dinero en medicamentos. gracias por ayudarnos chicos.</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">8</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">8</span>
-                            </div>
-                        </div>
-                    </div>    
-
-                    <div class="mb-2">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/7.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Enzo Chaves</p>
-                                <p class="text-sm leading-4 pt-0.5">Si hubiera sabido esto antes, no me hubiera gastado una fortuna en este remedio Silencil que no me ayudó en nada. Dios los bendiga</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">9</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">21</span>
-                            </div>
-                        </div>
-                    </div>        
-
-                    <div class="mb-2 resp">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/8.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Edvan Sabino Filho</p>
-                                <p class="text-sm leading-4 pt-0.5"><span style="color: #0052ff">Enzo Chaves </span>Hoy amanecí con tinnitus tan fuerte que me dio pánico. Leí algunos comentarios y lo haré. Dios muchas gracias</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">4</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">2</span>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <div class="mb-2 resp">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/9.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Patricio Gallardo</p>
-                                <p class="text-sm leading-4 pt-0.5"><span style="color: #0052ff">Enzo Chaves </span> Yo también Enzo. Pero ya comencé este programa hace 2 días y me está ayudando mucho. Pensé que ya no iba a poder deshacerme de él. te lo recomiendo mucho</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">2</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">7</span>
-                            </div>
-                        </div>
-                    </div>   
-
-                    <div class="mb-2">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/10.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Felicia Araujo</p>
-                                <p class="text-sm leading-4 pt-0.5">Gracias por su atención y amabilidad en ayudarnos. He estado teniendo este problema desde hace algún tiempo. Bueno, lo hay. abrazo de luz</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">5</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">17</span>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <div class="mb-2">
-                    <div class="flex w-full space-x-1 items-center font-[Helvetica]">
-                        <img src="img/16.png" class="cursor-pointer rounded-full h-10 w-10">
-                        <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
-                            <div class="px-0.5 py-1">
-                                <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline" style="margin-bottom: 2px">Donato V Perez</p>
-                                <p class="text-sm leading-4 pt-0.5">Tengo una audición perfecta y el tinnitus ha estado conmigo durante al menos 1 año. Voy a entrar al programa y volveré a dar un testimonio. Realmente agradecido!</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="flex w-full justify-between">
-                            <div class="w-12 sm:w-16"></div>
-                            <div class="grow flex gap-1 text-xs pt-0.5">
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Curtir</p>
-                                <p class="text-[#90949c]">·</p>
-                                <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">Responder</p>
-                                <p class="text-[#90949c]">·</p>
-                                <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
-                                    <p class="text-xs text-[#90949c]">2</p>
-                                    <p class="text-[#90949c] ">min</p>
-                                </div>
-                            </div>
-                            <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
-                                <img class="w-4 z-10 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
-                                <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
-                                <span class="text-xs text-[#90949c] pt-0.5">12</span>
-                            </div>
-                        </div>
-                    </div>            
-
-                  <span class="line-fb"></span>    
-                  <div id="depositions-plugin-facebook-block" style="display: flex;">
-                    <img style="width: 18px;margin-right: 5px;" id="depositions-icon-facebook" src="img/17.png" />
-                    <span id="depositions-txt-facebook" class="plugin-facebook-text ml-8">Plugin de comentários do Facebook</span>
-                  </div>    
-              </div>
-          </div>
     </div>
-    <!-- END COMENTÀRIOS -->
+    <!-- END REFERENCIAS -->
 
-    <footer style=" background-color: #000; padding-top: 300px">
+    <footer style=" color: #000; padding-top: 300px">
         <div class="last-pg">
           <!-- Termos de Uso e Política de Privacidade -->
-          <div class="texto-branco-div"><a style="cursor: pointer;" onclick="openTermos()" class="texto-branco"><b>Terminos de Uso</b></a> | <a style="cursor: pointer;" onclick="openPrivac()" class="texto-branco"><b>Política de Privacidad</b></a></div>
-          <p style="text-align: center; color: #fff; font-size: 12px; margin-top: 5px;">Copyright 2023 - Programa Mente Tranquila © Todos los derechos reservados</p>
+          <div style="text-align: center;color: #000;font-size: 16px;"><a style="cursor: pointer;" onclick="openTermos()" class="texto-branco"><b>Terminos de Uso</b></a> | <a style="cursor: pointer;" onclick="openPrivac()" class="texto-branco"><b>Política de Privacidad</b></a></div>
+          <p style="text-align: center; color: #000; font-size: 12px; margin-top: 5px;">Copyright 2023 - Programa Mente Tranquila © Todos los derechos reservados</p>
         </div>
     </footer>
     
@@ -1050,9 +376,6 @@ h4 {
     </div>
 
     <script type="text/javascript">
-    //temporização da Call to Action (em milissegundos)
-    //setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 1000); 
-
     //Abrindo popups
         //Privacidade
         function openPrivac() {
@@ -1101,7 +424,7 @@ h4 {
         
     //-------------------------------------
 
-    const DELAY_TIME_IN_SECONDS = 5;
+    const DELAY_TIME_IN_SECONDS = 0;//1266
     const DELAY_ELEMENTS_CLASS = 'delay';
 
      let player;
@@ -1132,23 +455,26 @@ h4 {
         }, 100)
     }
 
-    // Formatando o Telefone
-    const input = document.getElementById("phone-input");
-
-    input.oninput = function() {
-      let value = input.value.replace(/\D/g, ""); // remove tudo o que não é número
-      if (value.length > 11) {
-        value = value.slice(0, 11);
-      }
-      input.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7, 11)}`;
-    };
-
   </script>
   <script type="text/javascript">
     //Pessoas Assistindo
     function add(){number+=Math.floor((Math.random()*6)+1);document.getElementById("number").innerHTML=number;setTimeout("add()",10000);}        
     function generate(){number=Math.floor(Math.random()*1143)+1578;document.getElementById("number").innerHTML=number;add();}
     generate();    
+  </script>
+  <script>
+    var urlBackRedirect = 'https://bemmais.fun/mp/'; // lembre-se de usar a url sem espaços
+    // não altere nada abaixo dessa linha
+    urlBackRedirect = urlBackRedirect = urlBackRedirect.trim() +
+            (urlBackRedirect.indexOf("?") > 0 ? '&' : '?') +
+            document.location.search.replace('?', '').toString();
+    history.pushState({}, "", location.href);
+    history.pushState({}, "", location.href);
+    window.onpopstate = function () {
+        setTimeout(function () {
+            location.href = urlBackRedirect;
+        }, 1);
+    };
   </script>
 
   </body>
